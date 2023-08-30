@@ -28,6 +28,16 @@ body {
   color: #0f0d0e;
 }
 
+a {
+  text-decoration: none;
+
+  color: #b59f5b;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;
@@ -129,6 +139,117 @@ body {
   text-transform: uppercase;
 
   color: #ffffff;
+}
+
+.trends {
+  padding: 64px 0;
+}
+
+.trends-head {
+  position: relative;
+
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.trends-list {
+  display: flex;
+  gap: 4px;
+}
+
+.trend {
+  position: relative;
+
+  width: 25%;
+  min-height: 318px;
+  max-height: 25vh;
+}
+
+.trend-image-box {
+  position: relative;
+
+  display: block;
+  height: 100%;
+}
+
+.trend-image-box:before {
+  position: absolute;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  content: '';
+}
+
+.trend-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trend-info {
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+  left: 20px;
+  z-index: 2;
+
+  max-height: calc(100% - 32px);
+  box-sizing: border-box;
+  padding: 39px 33px 37px;
+  border: 3px solid #b59f5b;
+
+  overflow: hidden;
+}
+
+.trend-tags {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.trend-tag {
+  display: inline-block;
+  margin-bottom: 15px;
+
+  font-weight: bold;
+  text-transform: uppercase;
+
+  color: #b59f5b;
+}
+
+.trend-tag:nth-child(n + 1) {
+  margin-right: 19px;
+}
+
+.trend-name {
+  margin: 0;
+  max-height: 168px;
+
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+.trend-name-link {
+  text-decoration: none;
+
+  color: inherit;
 }
 
 .main {
@@ -455,10 +576,11 @@ body {
   outline: 1px solid #b59f5b;
 
   font-size: 14px;
-  line-height: 3.07;
+  line-height: 48px;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
+  text-decoration: none;
 
   color: #ffffff;
   background: #b59f5b;
@@ -467,6 +589,8 @@ body {
 }
 
 .btn:hover {
+  text-decoration: none;
+
   outline-color: #323232;
   background-color: #323232;
 }
@@ -563,6 +687,113 @@ body {
   vertical-align: super;
 
   color: #b59f5b;
+}
+
+.products {
+  padding: 64px 0;
+}
+
+.products-head {
+  position: relative;
+
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.products-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product {
+  width: 347px;
+}
+
+.product-image-box {
+  display: block;
+  width: 300px;
+  height: 204px;
+  margin: 0 auto;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  position: relative;
+
+  height: 267px;
+  box-sizing: border-box;
+  padding: 50px 20px 26px;
+  margin-top: -32px;
+  border: 3px solid #b59f5b;
+  z-index: 1;
+}
+
+.product-name {
+  margin: 0 0 14px;
+
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  color: #0f0d0e;
+
+  overflow: hidden;
+}
+
+.product-name-link {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+.product-name-link:hover {
+  text-decoration: none;
+}
+
+.product-description {
+  margin-bottom: 26px;
+
+  font-size: 15px;
+  line-height: 19px;
+
+  overflow: hidden;
+}
+
+.product-description p {
+  margin: 0;
+}
+
+.product-sale-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.product-price-old {
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.product-btn {
+  width: auto;
+  padding: 0 30px;
 }
 
 .sns {
