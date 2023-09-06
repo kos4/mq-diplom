@@ -152,13 +152,13 @@ a:hover {
 }
 
 .trends {
-  padding: 64px 0;
+  padding: 54px 0;
 }
 
 .trends-head {
   position: relative;
 
-  margin-bottom: 28px;
+  margin: 0 0 28px;
   padding-bottom: 14px;
 
   font-size: 20px;
@@ -169,21 +169,24 @@ a:hover {
 
 .trends-list {
   display: flex;
-  gap: 4px;
+  gap: 10px;
 }
 
 .trend {
   position: relative;
 
+  display: flex;
+  align-items: flex-end;
+
   width: 25%;
   min-height: 318px;
-  max-height: 25vh;
 }
 
 .trend-image-box {
-  position: relative;
+  position: absolute;
 
   display: block;
+  width: 100%;
   height: 100%;
 }
 
@@ -207,18 +210,14 @@ a:hover {
 }
 
 .trend-info {
-  position: absolute;
-  right: 20px;
-  bottom: 16px;
-  left: 20px;
+  position: relative;
   z-index: 2;
 
-  max-height: calc(100% - 32px);
-  box-sizing: border-box;
-  padding: 39px 33px 37px;
-  border: 3px solid #b59f5b;
+  margin: 16px 20px;
 
-  overflow: hidden;
+  box-sizing: border-box;
+  padding: 32px 30px;
+  border: 3px solid #b59f5b;
 }
 
 .trend-tags {
@@ -230,7 +229,7 @@ a:hover {
 
 .trend-tag {
   display: inline-block;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 
   font-weight: bold;
   text-transform: uppercase;
@@ -239,12 +238,11 @@ a:hover {
 }
 
 .trend-tag:nth-child(n + 1) {
-  margin-right: 19px;
+  margin-right: 7px;
 }
 
 .trend-name {
   margin: 0;
-  max-height: 168px;
 
   font-size: 20px;
   font-weight: bold;
@@ -252,8 +250,6 @@ a:hover {
   text-transform: uppercase;
 
   color: #ffffff;
-
-  overflow: hidden;
 }
 
 .trend-name-link {
@@ -263,7 +259,7 @@ a:hover {
 }
 
 .main {
-  padding-top: 64px;
+  padding-top: 10px;
 }
 
 .main-flex {
@@ -277,11 +273,11 @@ a:hover {
 
 .post {
   display: flex;
-  margin-bottom: 59px;
+  margin-bottom: 58px;
 }
 
 .post-image-box {
-  width: 50%;
+  width: 47%;
   height: 294px;
   margin: 0;
   padding: 0;
@@ -291,7 +287,7 @@ a:hover {
 
 .post-image {
   width: 100%;
-  height: 294px;
+  height: 100%;
   object-fit: cover;
   object-position: center center;
 }
@@ -383,7 +379,7 @@ a:hover {
 }
 
 .posts-new {
-  margin-bottom: 63px;
+  margin-bottom: 57px;
 }
 
 .post-new-title {
@@ -414,7 +410,7 @@ a:hover {
 .posts-new-post {
   display: flex;
 
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 .posts-new-image-box {
@@ -636,7 +632,7 @@ a:hover {
 
 .tags-list-link {
   display: inline-block;
-  padding: 6px 13px;
+  padding: 6px 12px;
   border: 3px solid #eeeeee;
 
   font-size: 12px;
@@ -700,13 +696,13 @@ a:hover {
 }
 
 .products {
-  padding: 64px 0;
+  padding-bottom: 64px;
 }
 
 .products-head {
   position: relative;
 
-  margin-bottom: 28px;
+  margin: 0 0 28px;
   padding-bottom: 14px;
 
   font-size: 20px;
@@ -756,7 +752,7 @@ a:hover {
 }
 
 .product-name {
-  margin: 0 0 14px;
+  margin: 0 0 5px;
 
   font-size: 20px;
   font-weight: bold;
@@ -782,7 +778,7 @@ a:hover {
   margin-bottom: 26px;
 
   font-size: 15px;
-  line-height: 19px;
+  line-height: 1.333;
 
   overflow: hidden;
 }
@@ -902,8 +898,11 @@ a:hover {
 
   width: 17px;
   height: 17px;
+  border: none;
 
   background: url('../svg/form-x.svg') center/cover no-repeat;
+
+  cursor: pointer;
 }
 
 .popup-content {
@@ -1003,6 +1002,14 @@ a:hover {
     max-width: 728px;
   }
 
+  .header-top {
+    padding: 43px 0 0;
+  }
+
+  .header-logo-image {
+    width: 158px;
+  }
+
   .header-menu {
     display: none;
   }
@@ -1026,33 +1033,52 @@ a:hover {
     display: none;
   }
 
+  .header-slogan {
+    padding: 170px 0 111px;
+  }
+
   .header-slogan-text {
-    width: 100%;
+    width: 93%;
 
     font-size: 40px;
     line-height: 1.375;
   }
 
   .trends {
-    padding: 50px 0;
+    padding: 44px 0;
   }
 
   .trends-head {
     margin-bottom: 19px;
+
+    font-size: 18px;
   }
 
   @media (orientation: portrait) {
     .trends-list {
       flex-wrap: wrap;
+      gap: 4px;
     }
 
     .trend {
       width: calc(50% - 2px);
+      min-height: 245px;
     }
   }
 
+  .trend-info {
+    margin-top: 13px;
+    margin-bottom: 13px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .trend-name {
+    font-size: 17px;
+  }
+
   .main {
-    padding-top: 0;
+    padding-top: 8px;
   }
 
   .posts {
@@ -1074,6 +1100,7 @@ a:hover {
 
   .post-image-box {
     width: 100%;
+    height: 300px;
     margin-bottom: 16px;
   }
 
@@ -1083,23 +1110,31 @@ a:hover {
   }
 
   .post-tags {
-    margin-bottom: 12px;
+    margin-bottom: 5px;
   }
 
   .post-name {
-    margin-bottom: 39px;
+    margin-bottom: 31px;
+
+    font-size: 17px;
   }
 
   .post-date-author {
-    margin-bottom: 37px;
+    margin-bottom: 28px;
   }
 
   .post-description {
     margin-bottom: 23px;
+
+    line-height: 1.4;
   }
 
   .products {
-    padding: 50px 0;
+    padding: 46px 0;
+  }
+
+  .products-head {
+    font-size: 18px;
   }
 
   .products-list {
@@ -1108,14 +1143,28 @@ a:hover {
 
   .product {
     width: calc(50% - 11px);
+    margin-top: 192px;
   }
 
   .product-image-box {
-    width: calc(100% - 40px);
+    top: -192px;
+
+    width: calc(100% - 44px);
+    height: 225px;
+  }
+
+  .product-info {
+    padding-top: 48px;
   }
 
   .product-name {
+    margin-bottom: 3px;
+
     font-size: 17px;
+  }
+
+  .product-description {
+    line-height: 1.4;
   }
 
   .popup {
@@ -1125,9 +1174,19 @@ a:hover {
   .popup-window {
     margin-top: 50px;
   }
+
+  .sns {
+    margin-bottom: 41px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
 }
 
 @media (max-width: 640px) {
+  .header-top {
+    padding-top: 33px;
+  }
+
   .header-top-flex {
     justify-content: right;
   }
@@ -1137,7 +1196,9 @@ a:hover {
   }
 
   .header-slogan {
-    background-position: left 36% center;
+    padding: 223px 0 213px;
+
+    background-position: left 32% center;
   }
 
   .header-slogan-logo {
@@ -1145,7 +1206,7 @@ a:hover {
 
     display: block;
     z-index: 1;
-    margin-bottom: 45px;
+    margin-bottom: 32px;
 
     text-align: center;
   }
@@ -1159,7 +1220,11 @@ a:hover {
   }
 
   .trends {
-    padding: 44px 0;
+    padding: 38px 0;
+  }
+
+  .trends-head {
+    font-size: 16px;
   }
 
   .trends-list {
@@ -1178,9 +1243,23 @@ a:hover {
     .trend {
       width: 100%;
       margin-bottom: 3px;
-      min-height: unset;
-      max-height: unset;
+      min-height: 232px;
     }
+  }
+
+  .trend-info {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 26px 19px;
+  }
+
+  .trend-name {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .main {
+    padding-top: 0;
   }
 
   .main-flex {
@@ -1189,19 +1268,94 @@ a:hover {
 
   .posts {
     margin-right: 0;
-    margin-bottom: 44px;
+    margin-bottom: 72px;
+  }
+
+  .post {
+    margin-bottom: 34px;
+  }
+
+  .post-image-box {
+    height: 254px;
+  }
+
+  .post-tags {
+    margin-bottom: 0;
+  }
+
+  .post-name {
+    margin-bottom: 20px;
+
+    font-size: 16px;
+  }
+
+  .post-date-author {
+    margin-bottom: 17px;
+  }
+
+  .post-description {
+    margin-bottom: 24px;
+
+    font-size: 14px;
+    line-height: 1.28;
+  }
+
+  .post-description p {
+    margin: 0 0 10px;
   }
 
   .main-right {
     width: 100%;
   }
 
+  .posts-new {
+    margin-bottom: 53px;
+  }
+
+  .post-new-title {
+    font-size: 16px;
+  }
+
+  .search {
+    margin-bottom: 46px;
+  }
+
+  .subscription {
+    margin-bottom: 40px;
+  }
+
+  .subscription-title {
+    font-size: 16px;
+  }
+
+  .tags {
+    margin-bottom: 35px;
+  }
+
+  .tags-title {
+    margin-bottom: 24px;
+
+    font-size: 16px;
+  }
+
+  .tags-list-link {
+    line-height: 1.25;
+  }
+
   .themes {
     margin-bottom: 0;
   }
 
+  .themes-title {
+    font-size: 16px;
+  }
+
   .products {
-    padding: 44px 0;
+    padding: 33px 0;
+  }
+
+  .products-head {
+    font-size: 16px;
   }
 
   .products-list {
@@ -1211,6 +1365,17 @@ a:hover {
 
   .product {
     width: 100%;
+    margin-top: 252px;
+  }
+
+  .product-image-box {
+    top: -255px;
+
+    height: 286px;
+  }
+
+  .product-description {
+    margin-bottom: 23px;
   }
 
   .popup-window {
