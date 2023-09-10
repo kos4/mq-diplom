@@ -1054,18 +1054,6 @@ a:hover {
     font-size: 18px;
   }
 
-  @media (orientation: portrait) {
-    .trends-list {
-      flex-wrap: wrap;
-      gap: 4px;
-    }
-
-    .trend {
-      width: calc(50% - 2px);
-      min-height: 245px;
-    }
-  }
-
   .trend-info {
     margin-top: 13px;
     margin-bottom: 13px;
@@ -1182,6 +1170,18 @@ a:hover {
   }
 }
 
+@media (max-width: 1200px) and (orientation: portrait) {
+  .trends-list {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .trend {
+    width: calc(50% - 2px);
+    min-height: 245px;
+  }
+}
+
 @media (max-width: 640px) {
   .header-top {
     padding-top: 33px;
@@ -1229,22 +1229,11 @@ a:hover {
 
   .trends-list {
     flex-wrap: wrap;
+    gap: 4px;
   }
 
   .trend {
     width: calc(50% - 2px);
-  }
-
-  @media (orientation: portrait) {
-    .trends-list {
-      display: block;
-    }
-
-    .trend {
-      width: 100%;
-      margin-bottom: 3px;
-      min-height: 232px;
-    }
   }
 
   .trend-info {
@@ -1382,5 +1371,17 @@ a:hover {
     width: 290px;
     height: 100%;
     max-height: 645px;
+  }
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+  .trends-list {
+    display: block;
+  }
+
+  .trend {
+    width: 100%;
+    margin-bottom: 3px;
+    min-height: 232px;
   }
 }
