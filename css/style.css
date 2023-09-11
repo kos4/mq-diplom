@@ -1054,6 +1054,10 @@ a:hover {
     font-size: 18px;
   }
 
+  .trends-list {
+    gap: 4px;
+  }
+
   .trend-info {
     margin-top: 13px;
     margin-bottom: 13px;
@@ -1173,7 +1177,36 @@ a:hover {
 @media (max-width: 1200px) and (orientation: portrait) {
   .trends-list {
     flex-wrap: wrap;
-    gap: 4px;
+  }
+
+  .trend {
+    width: calc(50% - 2px);
+    min-height: 245px;
+  }
+}
+
+@media (max-width: 1200px) and (orientation: landscape) {
+  .trends-list {
+    flex-wrap: nowrap;
+  }
+
+  .trend {
+    width: 25%;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .trend-info {
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 840px) and (orientation: landscape) {
+  .trends-list {
+    flex-wrap: wrap;
   }
 
   .trend {
@@ -1237,6 +1270,7 @@ a:hover {
   }
 
   .trend-info {
+    width: 100%;
     margin-left: 15px;
     margin-right: 15px;
     padding: 26px 19px;
